@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9672C1082000985500B4CF98 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672C1072000985500B4CF98 /* main.swift */; };
+		9672C10F2000988D00B4CF98 /* funrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672C10E2000988D00B4CF98 /* funrequest.swift */; };
+		9672C11120009F5800B4CF98 /* funcrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672C11020009F5700B4CF98 /* funcrypto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		9672C1042000985500B4CF98 /* funraise-swift-interview-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "funraise-swift-interview-test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672C1072000985500B4CF98 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9672C10E2000988D00B4CF98 /* funrequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funrequest.swift; sourceTree = "<group>"; };
+		9672C11020009F5700B4CF98 /* funcrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funcrypto.swift; sourceTree = "<group>"; };
+		9672C11220009FF500B4CF98 /* funraise-swift-interview-test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "funraise-swift-interview-test-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				9672C1072000985500B4CF98 /* main.swift */,
+				9672C10E2000988D00B4CF98 /* funrequest.swift */,
+				9672C11020009F5700B4CF98 /* funcrypto.swift */,
+				9672C11220009FF500B4CF98 /* funraise-swift-interview-test-Bridging-Header.h */,
 			);
 			path = "funraise-swift-interview-test";
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 				TargetAttributes = {
 					9672C1032000985500B4CF98 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -121,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9672C1082000985500B4CF98 /* main.swift in Sources */,
+				9672C11120009F5800B4CF98 /* funcrypto.swift in Sources */,
+				9672C10F2000988D00B4CF98 /* funrequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,8 +247,12 @@
 		9672C10C2000985500B4CF98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "funraise-swift-interview-test/funraise-swift-interview-test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -245,8 +260,11 @@
 		9672C10D2000985500B4CF98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "funraise-swift-interview-test/funraise-swift-interview-test-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
